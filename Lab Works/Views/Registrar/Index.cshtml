@@ -1,0 +1,65 @@
+﻿@using Lab_Works.Models
+@model List<SessionRegistrar>
+@{
+    ViewBag.Title = "Lab Registrar";
+}
+<div class="container">
+    @if (Session["user_ctrl"] as string == "Student")
+    {
+        using (Html.BeginForm("Create", "Registrar", CustomFunctions.ctrltype()))
+        {
+            <div class="row g-3">
+                <div class="col-md-5">
+                    @Html.Label("Session", htmlAttributes: new { @class = "control-label col" })
+                    <div class="col">
+                        @Html.DropDownList("reg_sess_id", CustomFunctions.GetSessionList(), "Select Session", new { @class = "form-select col" })
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    @Html.Label("PC Number", htmlAttributes: new { @class = "control-label col" })
+                    <div class="col">
+                        @Html.TextBox("reg_pc_no", "", new { placeholder = "Enter PC Number", @class = "form-control col" })
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <br />
+                    <div class="col">
+                        <input type="submit" value="Register" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    <br /><br /><br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Session</th>
+                <th>Faculty</th>
+                <th>Lab No</th>
+                <th>PC No</th>
+                <th>End Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.sr_user_id</td>
+                    <td>@item.sr_sess_id</td>
+                    <td>@item.sr_creator</td>
+                    <td>@item.sr_lab_id</td>
+                    <td>@item.sr_pc_no</td>
+                    <td>@item.sr_end_time</td>
+                </tr>
+            }
+            @if (Model.Count() == 0)
+            {
+                <tr>
+                    <td class="text-muted" colspan="6"> No Data Available </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

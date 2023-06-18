@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    @Styles.Render("~/Content/cssBase")
+    <link href="~/Content/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="row m-0">
+        <div class="col-md-8 p-0">
+            <div class="logo">
+                <img src="~/Files/img_logo.png" class="logo d-inline-block align-text-bottom" />
+                <h1 class="logotext">Lab Works</h1>
+            </div>
+            <div class="quotecontainer">
+                <h1 class="quote1">Hey there, nice to meet you.</h1>
+                <h2 class="quote2">An apple a day keeps the doctor away.</h2>
+                <h4 class="quote3">- Tim Cook</h4>
+            </div>
+        </div>
+        <div class="col-md-4 p-0">
+            <div class="formcontainer">
+                @if (Request.QueryString.Count > 0 && Request.QueryString.Get("q") == "Recovery")
+                {
+                    <form action="/Home/Recovery" method="post" class="container">
+                        <div class="mb-3">
+                            <label for="InputUsername1" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="InputUsername1" required name="username" placeholder="Enter regestered username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Input1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="Input1" required name="email" placeholder="Enter regestered email">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Request Recovery Email</button>
+                        </div>
+                        <div class="mb-3">
+                            <a href="/" class="link-primary">Login Instead</a>
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <form action="/Home/Authenticate" method="post" class="container">
+                        <div class="mb-3">
+                            <label for="InputUsername1" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="InputUsername1" required name="username" placeholder="Enter username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="InputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="InputPassword1" required name="password" placeholder="Enter password">
+                        </div>
+                        <div class="mb-3">
+                            <a href="/?q=Recovery" class="link-primary">Forgot password?</a>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label @ViewBag.msgclass ">@ViewBag.msg</label>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Add Users";
+}
+@model List<Lab_Works.Models.User>
+
+<div class="container">
+    <!--using (Html.BeginForm("OpenFile", "User" , CustomFunctions.ctrltype() , FormMethod.Post, new { enctype = "multipart/form-data" }))-->
+
+    <form action="/@CustomFunctions.GetUserType()/User/OpenFile" method="post" , enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Load users from Excel File (.xlsx)</label>
+            <input class="form-control" type="file" accept=".xlsx" id="formFile" name="xlsfile">
+        </div>
+        <input type="submit" value="Load File" class="btn btn-primary" />
+    </form>
+
+    View sample excel file
+    <hr />
+    @if (ViewBag.msg != "Failed")
+    {
+        <h2 class="text-success">@ViewBag.msg</h2>
+    }
+    @if (Model != null && Model.Count() > 0)
+    {
+        if (ViewBag.msg == "Failed")
+        {
+            <h2 class="text-danger">Following users are not processed. Please check the data and try again.</h2>
+        }
+        else
+        {
+            using (Html.BeginForm("SaveFile", "User", CustomFunctions.ctrltype()))
+            {
+                <input type="submit" value="Verify and Submit" class="btn btn-primary" />
+            }
+        }
+        <table class="table">
+            <tr>
+                <th>User Id</th>
+                <th>User Password</th>
+                <th>User First Name</th>
+                <th>User Last Name</th>
+                <th>User Email</th>
+                <th>User Type</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.user_id</td>
+                    <td>@item.user_password</td>
+                    <td>@item.user_fname</td>
+                    <td>@item.user_lname</td>
+                    <td>@item.user_email</td>
+                    <td>@item.user_type</td>
+                </tr>
+            }
+        </table>
+    }
+</div>

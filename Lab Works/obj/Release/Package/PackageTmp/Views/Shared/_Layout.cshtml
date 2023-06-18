@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/cssBase")
+    @Styles.Render("~/Content/cssApp")
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logotext">
+            Lab Works
+        </div>
+        <div class="actions">
+            <a href="/Home/Profile">
+                <img src="https://img.icons8.com/material/24/000000/admin-settings-male.png" />
+            </a>
+            <a href="/Home/Logout">
+                <img src="https://img.icons8.com/material/24/000000/logout-rounded--v2.png" />
+            </a>
+        </div>
+    </nav>
+    <div class="menustrip">
+        @{
+            string ctrl = Session["user_ctrl"] as string;
+            string indexlink = "/" + ctrl + "/Home";
+        }
+        <div class="ms-items">
+            <a href="@indexlink" class="">
+                <img src="https://img.icons8.com/material/24/000000/home--v5.png" class="" />
+            </a>
+        </div>
+        
+        <hr />
+    </div>
+    <div class="maincontainer">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

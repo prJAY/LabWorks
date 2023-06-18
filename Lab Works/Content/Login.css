@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.logo {
+  display: flex;
+  position: relative;
+  height: 20rem;
+}
+.logo img{
+  opacity: 0.2;
+  height: 30rem;
+  width: 30rem;
+  transform: translate(-10rem,-10rem);
+}
+.logotext{
+  font-family: fonarto;
+  font-size: 5rem;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.quotecontainer{
+  font-family: Montserrat;
+  margin: 10rem 2rem;
+}
+.quote1{
+  font-weight: 800;
+}
+.quote2{
+  margin-top: 2rem;
+}
+.quote3{
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.formcontainer{
+  background-color: #f8f8fa;
+  height: 100vh;
+  padding: 20vh 10px 0 10px;
+}
+a{
+  text-decoration: none;
+}

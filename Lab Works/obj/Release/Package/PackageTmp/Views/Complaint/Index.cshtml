@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Lab_Works.Models.Complaint>
+@{
+    ViewBag.Title = "Complaints";
+}
+<link href="~/Content/ComplaintCard.css" rel="stylesheet" />
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <a href="/@CustomFunctions.GetUserType()/Complaint/Details/@item.comp_id">
+            @Html.Partial("_Card_Complaint", item)
+        </a>
+    }
+</div>

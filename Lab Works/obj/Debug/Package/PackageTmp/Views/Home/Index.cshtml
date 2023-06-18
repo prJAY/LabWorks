@@ -1,0 +1,14 @@
+﻿@using Lab_Works.Models
+@model List<MenuGroup>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
+    ViewBag.page = "Index";
+}
+
+@foreach (MenuGroup menu in Model)
+{
+    <div class="hero-group">
+        @Html.Partial("_Card_MenuGroup", menu)
+    </div>
+}

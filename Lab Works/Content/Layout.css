@@ -1,0 +1,40 @@
+body {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: max-content 1fr; 
+    grid-template-areas: "nav" "main";
+}
+/* section 1 */
+.navbar {
+    min-height: 90px;
+    max-height: max-content;
+    grid-area: nav;
+    z-index: 1;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-icons{
+    width: 150px;
+    margin: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.collapsing .navbar-icons,.show .navbar-icons{
+    margin: 20px 0;
+    width: 100%;
+    padding: 20px 50px;
+    
+}
+.navbar-icons img{
+    height: 35px;
+}
+/* section 2 */
+
+.maincontainer{
+    background-color: white;
+    height: max-content;
+    grid-area: main;
+    height: 100%;
+    overflow-x: scroll;
+}

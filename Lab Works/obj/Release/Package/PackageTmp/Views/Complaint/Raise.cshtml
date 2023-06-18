@@ -1,0 +1,44 @@
+﻿@model Lab_Works.Models.Complaint
+@{
+    ViewBag.Title = "New Complaint";
+}
+<div class="container">
+    @using (Html.BeginForm("PostRaise", "Complaint", CustomFunctions.ctrltype()))
+    {
+        <div class="row g-4">
+            <div class="col-md-2">
+                @Html.Label("Lab No", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.DropDownList("comp_lab_id", CustomFunctions.GetLabList(), "Select Lab No", new { @class = "form-select col" })
+                    @Html.ValidationMessageFor(model => model.comp_lab_id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-5">
+                @Html.Label("Enter Equipment Type", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.Editor("comp_equip_type", new { htmlAttributes = new { @class = "form-control" , placeholder = "eg. PC , Projector"} })
+                    @Html.ValidationMessageFor(model => model.comp_equip_type, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-5">
+                @Html.Label("Enter Equipment No", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.Editor("comp_equip_no", new { htmlAttributes = new { @class = "form-control" , placeholder = "eg. 16.64" } })
+                    @Html.ValidationMessageFor(model => model.comp_equip_no, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                @Html.Label("Describe the issue", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.TextArea("comp_details", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.comp_details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Raise Complaint" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

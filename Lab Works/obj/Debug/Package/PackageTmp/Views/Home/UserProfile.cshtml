@@ -1,0 +1,49 @@
+﻿@model Lab_Works.Models.User
+
+@{
+    ViewBag.Title = "User Profile";
+}
+<div class="container">
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                @Html.Label("First Name", htmlAttributes: new { @class = "control-label col-md" })
+                <div class="col-md">
+                    @Html.EditorFor(model => model.user_fname, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.user_fname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.Label("Last Name", htmlAttributes: new { @class = "control-label col-md" })
+                <div class="col-md">
+                    @Html.EditorFor(model => model.user_lname, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.user_lname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.Label("Registered Email", htmlAttributes: new { @class = "control-label col-md" })
+                <div class="col-md  ">
+                    @Html.EditorFor(model => model.user_email, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.user_email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.Label("Change Password", htmlAttributes: new { @class = "control-label col-md" })
+                <div class="col-md">
+                    @Html.PasswordFor(model => model.user_password, new { @class = "form-control" , placeholder = "Enter new password" })
+                    @Html.ValidationMessageFor(model => model.user_password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="col-md-12">
+                <div class="col-md-offset-2 col-md">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

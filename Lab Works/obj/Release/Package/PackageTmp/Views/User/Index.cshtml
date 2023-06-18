@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Lab_Works.Models.User>
+@{
+    ViewBag.Title = "All Users";
+    string fulltype = "";
+}
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            switch (item.user_type)
+            {
+                case "S": fulltype = "Student"; break;
+                case "A": fulltype = "Admin"; break;
+                case "T": fulltype = "Technician"; break;
+                case "F": fulltype = "Faculty"; break;
+            }
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_fname) 
+                    @Html.DisplayFor(modelItem => item.user_lname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_email)
+                </td>
+                <td>
+                    @fulltype
+                </td>
+                <td>
+                    <a href="/@CustomFunctions.GetUserType()/User/Details/@item.user_id">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

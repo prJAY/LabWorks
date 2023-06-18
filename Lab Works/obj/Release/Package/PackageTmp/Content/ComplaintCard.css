@@ -1,0 +1,74 @@
+.maincontainer{
+  background: #f6f6f6;
+}
+.maincontainer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,28rem);
+  grid-gap: 20px;
+  max-width: 90%;
+  justify-content: center;
+}
+.complaintcard{
+  background-color: white;
+  height: 15rem;
+  width: 28rem;
+  padding: 10px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 10px 1fr 2fr 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "hr hr"
+    "id status"
+    "details details"
+    "equip raiser"
+    "lab date"
+    ;
+  font-family: Muli;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  overflow: hidden;
+}
+.complaintcard:hover{
+    box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);  
+}
+.cc_comp_id{
+  grid-area: id;
+}
+.cc_date{
+  grid-area: date;
+}
+.cc_details{
+  overflow: hidden;
+  grid-area: details;
+}
+.cc_eq_details{
+  grid-area: equip;
+}
+.cc_lab_id{
+  grid-area: lab;
+}
+.cc_raiser{
+  grid-area: raiser;
+}
+.cc_status{
+  grid-area: status;
+  text-align: right;
+}
+.complaintcard hr{
+  grid-area: hr;
+  height: 12px;
+  width: 120%;
+  margin: 0;
+  transform: translate(-10%,-10px);
+}
+.complaintcard label, .complaintcard p{
+  color: black;
+}
+p{
+  margin: 0;
+}
+.cc_style_muted{
+  color:#696969;
+}

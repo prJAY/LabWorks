@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Lab_Works.Models.Lab>
+@{
+    ViewBag.Title = "Labs";
+}
+<link rel="stylesheet" href="~/Content/LabCard.css" />
+@if (CustomFunctions.GetUserType().Equals("Technician"))
+{
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            <a href="/@CustomFunctions.GetUserType()/Lab/Details/@item.lab_id">
+                @Html.Partial("_Card_Lab", item)
+            </a>
+        }
+    </div>
+}
+else
+{
+    <div class="container">
+        @foreach (var item in Model)
+        {
+            @Html.Partial("_Card_Lab", item)
+        }
+    </div>
+}

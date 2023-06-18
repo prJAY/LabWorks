@@ -1,0 +1,66 @@
+﻿@using Lab_Works.Models
+@model List<LabSession>
+@{ 
+    string hrefpath = "/"+CustomFunctions.GetUserType() + "/Registrar/Students";
+} 
+<div class="container">
+    @using (Html.BeginForm("CreateSession", "Registrar", CustomFunctions.ctrltype()))
+    {
+        <div class="row g-3">
+            <div class="col-md-4">
+                @Html.Label("Lab No", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.DropDownList("sess_lab_id", CustomFunctions.GetLabList(), "Select Lab No", new { @class = "form-select col" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                @Html.Label("Class Name", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.TextBox("sess_class", "", new { placeholder = "eg. MCA / MSc IT", @class = "form-control col" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                @Html.Label("Set Session End Time", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    <input type="time" name="sess_end_time" class="form-control" />
+                    <small class="text-muted">Time selection is currently supported by Chrome only. For others enter time in this format HH:MM AM/PM</small>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Class</th>
+                <th>Lab No</th>
+                <th>Session End Time</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.sess_id</td>
+                    <td>@item.sess_class</td>
+                    <td>@item.sess_lab_id</td>
+                    <td>@item.sess_end_time</td>
+                    <td><a href="@hrefpath/@item.sess_id">Students</a></td>
+                </tr>
+            }
+            @if (Model.Count() == 0)
+            {
+                <tr>
+                    <td colspan="5" class="text-muted">No data available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

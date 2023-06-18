@@ -1,0 +1,126 @@
+D:\Lab Works\Lab Works\Lab Works\bin\Lab Works.dll.config
+D:\Lab Works\Lab Works\Lab Works\bin\Lab Works.dll
+D:\Lab Works\Lab Works\Lab Works\bin\Lab Works.pdb
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\csc.exe
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\csc.exe.config
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\csc.rsp
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\csi.exe
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\csi.rsp
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\System.AppContext.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\System.Collections.Immutable.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\System.IO.FileSystem.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\System.Reflection.Metadata.dll
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\vbc.exe
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\vbc.exe.config
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\vbc.rsp
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\VBCSCompiler.exe
+D:\Lab Works\Lab Works\Lab Works\bin\roslyn\VBCSCompiler.exe.config
+D:\Lab Works\Lab Works\Lab Works\bin\Antlr3.Runtime.dll
+D:\Lab Works\Lab Works\Lab Works\bin\EntityFramework.dll
+D:\Lab Works\Lab Works\Lab Works\bin\EntityFramework.SqlServer.dll
+D:\Lab Works\Lab Works\Lab Works\bin\ExcelDataReader.dll
+D:\Lab Works\Lab Works\Lab Works\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Lab Works\Lab Works\Lab Works\bin\Microsoft.Web.Infrastructure.dll
+D:\Lab Works\Lab Works\Lab Works\bin\Newtonsoft.Json.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Helpers.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Mvc.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Optimization.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Razor.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Deployment.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.dll
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Razor.dll
+D:\Lab Works\Lab Works\Lab Works\bin\WebGrease.dll
+D:\Lab Works\Lab Works\Lab Works\bin\EntityFramework.xml
+D:\Lab Works\Lab Works\Lab Works\bin\EntityFramework.SqlServer.xml
+D:\Lab Works\Lab Works\Lab Works\bin\ExcelDataReader.pdb
+D:\Lab Works\Lab Works\Lab Works\bin\ExcelDataReader.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Helpers.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Mvc.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Optimization.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.Razor.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Deployment.xml
+D:\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Razor.xml
+D:\Lab Works\Lab Works\Lab Works\bin\Newtonsoft.Json.xml
+D:\Lab Works\Lab Works\Lab Works\bin\Antlr3.Runtime.pdb
+D:\Lab Works\Lab Works\Lab Works\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.csprojAssemblyReference.cache
+D:\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.csproj.CoreCompileInputs.cache
+D:\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.csproj.CopyComplete
+D:\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.dll
+D:\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.pdb
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Lab Works.dll.config
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Lab Works.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Lab Works.pdb
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\csc.exe
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\csc.exe.config
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\csc.rsp
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\csi.exe
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\csi.rsp
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\System.AppContext.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\System.Collections.Immutable.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\System.IO.FileSystem.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\System.Reflection.Metadata.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\vbc.exe
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\vbc.exe.config
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\vbc.rsp
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\VBCSCompiler.exe
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\roslyn\VBCSCompiler.exe.config
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Antlr3.Runtime.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\EntityFramework.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\EntityFramework.SqlServer.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\ExcelDataReader.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Microsoft.Web.Infrastructure.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Newtonsoft.Json.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Helpers.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Mvc.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Optimization.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Razor.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Deployment.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Razor.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\WebGrease.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\EntityFramework.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\EntityFramework.SqlServer.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\ExcelDataReader.pdb
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\ExcelDataReader.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Helpers.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Mvc.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Optimization.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.Razor.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Deployment.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\System.Web.WebPages.Razor.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Newtonsoft.Json.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Antlr3.Runtime.pdb
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.csproj.AssemblyReference.cache
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.csproj.CoreCompileInputs.cache
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.csproj.CopyComplete
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.dll
+D:\Development\Projects\Lab Works\Lab Works\Lab Works\obj\Release\Lab Works.pdb

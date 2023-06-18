@@ -1,0 +1,34 @@
+﻿@font-face {
+    font-family: 'fonarto';
+    src: url('/Files/Fonts/fonarto.woff2') format('woff2'), url('/Files/Fonts/fonarto.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('/Files/Fonts/montserrat.woff2') format('woff2'), url('/Files/Fonts/montserrat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('/Files/Fonts/montserrat-bold.woff2') format('woff2'), url('/Files/Fonts/montserrat-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('/Files/Fonts/montserrat-extrabold.woff2') format('woff2'), url('/Files/Fonts/montserrat-extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'muli';
+    src: url('/Files/Fonts/muli-webfont.woff2') format('woff2'), url('/Files/Fonts/muli-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

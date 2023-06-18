@@ -1,0 +1,51 @@
+﻿@model Lab_Works.Models.Complaint
+@{
+    ViewBag.Title = "New Complaint";
+}
+<div class="container">
+    @using (Html.BeginForm("StatusUpdate", "Complaint", CustomFunctions.ctrltype()))
+    {
+        <div class="row g-4">
+            <div class="col-md-3">
+                @Html.Label("Change Status", htmlAttributes: new { @class = "control-label col" } )
+                <div class="col">
+                    @Html.DropDownListFor( model => model.comp_status, CustomFunctions.GetComplaintStatusList(), new { @class = "form-select col" })
+                    @Html.ValidationMessageFor(model => model.comp_status, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                @Html.Label("Lab No", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.Editor("comp_lab_id", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.comp_lab_id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                @Html.Label("Equipment No", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.Editor("comp_equip_no", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.comp_equip_no, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                @Html.Label("Equipment Type", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.Editor("comp_equip_type", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.comp_equip_type, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                @Html.Label("Describe the issue", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.TextArea("comp_details", new { @class = "form-control" , @readonly = "readonly" })
+                    @Html.ValidationMessageFor(model => model.comp_details, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Update Status" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+</div>

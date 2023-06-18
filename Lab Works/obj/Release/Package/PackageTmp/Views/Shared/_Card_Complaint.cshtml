@@ -1,0 +1,52 @@
+﻿@model Lab_Works.Models.Complaint
+@{
+    string equipment = Model.comp_equip_type + " " + Model.comp_equip_no;
+    string hrclass = "bg-dark";
+    switch (Model.comp_status)
+    {
+        case "Pending": hrclass = "bg-danger"; break;
+        case "Processing": hrclass = "bg-warning"; break;
+        case "Resolved": hrclass = "bg-success"; break;
+        case "Cancelled": hrclass = "bg-dark"; break;
+    }
+}
+<div class="complaintcard">
+    <hr class="@hrclass" />
+    <label class="cc_comp_id">Ticket #@Model.comp_id</label>
+    <label class="cc_status">@Model.comp_status</label>
+    <p class="cc_details">
+        <span class="cc_style_muted">
+            Issue details
+        </span>
+        <br />
+        @Model.comp_details
+    </p>
+    <p class="cc_eq_details">
+        <span class="cc_style_muted">
+            Issue Device
+        </span>
+        <br />
+        @equipment
+    </p>
+    <p class="cc_raiser">
+        <span class="cc_style_muted">
+            Issue Raised By
+        </span>
+        <br />
+        @Model.comp_raised_by_id
+    </p>
+    <p class="cc_lab_id">
+        <span class="cc_style_muted">
+            Lab No
+        </span>
+        <br />
+        @Model.comp_lab_id
+    </p>
+    <p class="cc_date">
+        <span class="cc_style_muted">
+            Raised On
+        </span>
+        <br />
+        @Model.comp_raised_date
+    </p>
+</div>

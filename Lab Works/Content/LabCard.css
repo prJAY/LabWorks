@@ -1,0 +1,73 @@
+.maincontainer{
+    color: #696969;
+    background-color: #f6f6f6;
+}
+.maincontainer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,320px);
+    grid-gap: 10px;
+    max-width: 90%;
+    justify-content: center;
+}
+.container a{
+    color: #696969;
+}
+.card_main {
+    font-family: Muli;
+    background: white;
+    box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    height: 200px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "id pc" 
+        "name name" 
+        "incharge incharge";
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card_main:hover{
+    box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+}
+.card_id {
+    grid-area: id;
+}
+.card_pc img{
+    height: 28px;
+}
+.card_pc {
+    grid-area: pc;
+    text-align: right;
+}
+
+.card_name {
+    margin-top: 60px;
+    grid-area: name;
+    font-size: larger;
+    background: linear-gradient(to right,#9867f0 0%,#ed4e50 50%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.card_incharge {
+    margin-top: 20px;
+    grid-area: incharge;
+}
+.card_name:hover{
+	background: linear-gradient(to left, #ed4e50, #9867f0 ,#ed4e50,#9867f0);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@keyframes gradient {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

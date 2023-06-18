@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/Index.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logotext">
+            Lab Works
+        </div>
+    </nav>
+    <div class="menustrip">
+    </div>
+    <div class="maincontainer">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <!--
+        void space
+
+            <img src="~/Files/img_logo.png" class="logo d-inline-block align-text-bottom" />
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+            <span class="navbar-icons">
+                @{
+                    string ctrl = Session["user_ctrl"] as string;
+                    string indexlink = "/" + ctrl + "/Home";
+                }
+                <a href="@indexlink">
+                    <img src="~/Files/img_back.png" alt="Back" class="back" />
+                </a>
+                <a href="/Home/Profile">
+                    <img src="~/Files/img_settings.png" alt="Profile" class="profile" />
+                </a>
+                <a href="/Home/Logout">
+                    <img src="~/Files/img_logout.png" alt="Logout" class="logout" />
+                </a>
+
+                .
+            </span>
+        </div>
+    <div class="quotecontainer container">
+        @{
+            int hour = DateTime.Now.TimeOfDay.Hours;
+            if (hour >= 7 && hour <= 11)
+            {
+                ViewBag.greet = "Good Evening";
+            }
+            else if (hour >= 12 && hour <= 15)
+            {
+                ViewBag.greet = "Good Afternoon";
+            }
+            else
+            {
+                ViewBag.greet = "Good Evening";
+            }
+        }
+
+        <h3 class="quote1">@ViewBag.greet,</h3>
+        <h1 class="quote2">@Session["user_name"].ToString()</h1>
+    </div>
+    <div class="division">
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-300 0 950 270">
+            <path d="M-314,267 C105,364 400,100 812,279" fill="none" stroke="#f6f6f6" stroke-width="120" stroke-linecap="round" />
+        </svg>
+    </div>-->
+</body>
+</html>

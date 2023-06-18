@@ -1,0 +1,24 @@
+.menugroup{
+    display: flex;
+}
+.menucard{
+    background: white;
+    color:#696969;
+    box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+    transition: all 0.25s ease, transform 0.25s ease;
+    padding: 10px 15px;
+    min-width: 200px;
+    max-width: max-content;
+    margin: 15px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+}
+.menucard:hover{
+    color:black;
+    box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+}
+.menucard:hover svg{
+    stroke: black;
+}

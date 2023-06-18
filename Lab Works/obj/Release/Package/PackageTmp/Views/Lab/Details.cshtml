@@ -1,0 +1,70 @@
+﻿@model Lab_Works.Models.Lab
+
+@{
+    ViewBag.Title = "Lab Details";
+}
+<div class="container">
+    @using (Html.BeginForm("Update", "Lab", CustomFunctions.ctrltype()))
+    {
+        <div class="row g-3">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="col-md-6">
+                @Html.Label("Lab Id", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.lab_id, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.lab_id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.Label("Lab Incharge Id", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.DropDownListFor(model => model.lab_incharge_id, CustomFunctions.GetFacultyList(), "Select Lab Incharge", new { @class = "form-select col" })
+                    @Html.ValidationMessageFor(model => model.lab_incharge_id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                @Html.Label("Lab Name", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.lab_name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.lab_name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                @Html.Label("No of PCs Available", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.no_of_pc, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.no_of_pc, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                @Html.Label("Starting PC IP", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.starting_ip, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.starting_ip, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-4">
+                @Html.Label("Ending PC IP", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.ending_ip, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ending_ip, "", new { @class = "text-danger" })
+                </div>
+            </div><br />
+            <div class="col-md-12">
+                <div class="col-md-offset-2 col">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+    <br />
+    @using (Html.BeginForm("Delete", "Lab", CustomFunctions.ctrltype()))
+    {
+        @Html.HiddenFor(model => model.lab_id)
+        <div class="col-md-12">
+            <div class="col-md-offset-2 col">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        </div>
+    }
+</div>

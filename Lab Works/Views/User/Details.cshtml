@@ -1,0 +1,69 @@
+﻿@model Lab_Works.Models.User
+@{
+    ViewBag.Title = "Edit User";
+
+    List<SelectListItem> selectListItems = new List<SelectListItem>();
+    selectListItems.Add(new SelectListItem { Text = "Admin", Value = "A" });
+    selectListItems.Add(new SelectListItem { Text = "Technician", Value = "T" });
+    selectListItems.Add(new SelectListItem { Text = "Faculty", Value = "F" });
+    selectListItems.Add(new SelectListItem { Text = "Student", Value = "S" });
+}
+
+<div class="container">
+    @using (Html.BeginForm("Update", "User" ,CustomFunctions.ctrltype()))
+    {
+        <div class="row g-3">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.user_id)
+
+            <div class="col-md-6">
+                @Html.Label("First Name", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.user_fname, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.user_fname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                @Html.Label("Last Name", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.user_lname, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.user_lname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                @Html.Label("User Type", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.DropDownList("user_type", selectListItems, "Select Type", new { @class = "form-select" })
+                    @Html.ValidationMessageFor(model => model.user_type, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-9">
+                @Html.Label("Email ID", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.user_email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.user_email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="col-md-12">
+                @Html.Label("Password", htmlAttributes: new { @class = "control-label col" })
+                <div class="col">
+                    @Html.EditorFor(model => model.user_password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.user_password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br /><br />
+            <div class="col-md-12">
+                <div class="col-md-offset-2 col-md-6">
+                    <input type="submit" value="Save Details" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+    @using (Html.BeginForm("Delete","User", CustomFunctions.ctrltype()))
+    {
+        <div class="col-md-offset-2 col-md-6">
+            @Html.HiddenFor(model => model.user_id)<br />
+            <input type="submit" value="Delete User" class="btn btn-danger" onclick="return confirm('Do you really want to delete the user @Model.user_fname?')" />
+        </div>
+    }
+</div>

@@ -1,0 +1,11 @@
+﻿@model Lab_Works.Models.Lab
+
+<div class="card_main">
+    <label class="card_id">@Model.lab_id</label>
+    <div class="card_pc">
+        <img src="~/Files/img_pc2.png" />
+        <label>@Model.no_of_pc</label>
+    </div>
+    <label class="card_name">@Model.lab_name</label>
+    <label class="card_incharge">@CustomFunctions.GetUserName(Model.lab_incharge_id).ToString()</label>
+</div>
